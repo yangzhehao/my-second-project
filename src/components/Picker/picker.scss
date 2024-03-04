@@ -1,0 +1,50 @@
+.picker_body {
+    width: 750rpx;
+    height: 650rpx;
+    box-sizing: border-box;
+    padding: 80rpx 48rpx 0;
+
+    .picker-view {
+        width: 80%;
+        margin: 0 auto;
+        height: 300rpx;
+
+
+        .picker-view-item {
+            line-height: 100rpx;
+            text-align: center;
+            font-size: 26rpx;
+        }
+    }
+
+    .picker_footer {
+        display: flex;
+        justify-content: space-between;
+        height: 88rpx;
+        margin-top: 120rpx;
+
+        .btn {
+            height: 100%;
+            width: 310rpx;
+            border: none;
+            border-radius: 100rpx;
+            font-size: 30rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0
+        }
+
+        .btn.cancel {
+            background: $green_o1;
+            color: $green;
+        }
+
+        .btn.confirm {
+            background: $green;
+            color: $white;
+        }
+    }
+
+
+}

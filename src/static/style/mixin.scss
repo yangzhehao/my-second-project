@@ -1,0 +1,21 @@
+// left离左边的距离 lineWidth线宽 mapColorString 主题对象对应的键
+//使用了此mixin 不能在元素上使用transform
+@mixin useLine($left, $lineWidth, $color) {
+    height: 2rpx;
+    position: absolute;
+    bottom: 0;
+    left: $left;
+    width: $lineWidth;
+    transform: scaleY(.5);
+    background: $color;
+
+}
+
+@mixin useArrowRight($borderWidth, $color) {
+    width: $borderWidth;
+    height: $borderWidth;
+
+    border-top: 2rpx solid $color;
+    border-right: 2rpx solid $color;
+
+}

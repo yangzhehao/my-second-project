@@ -1,0 +1,238 @@
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10075;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: $mask;
+}
+
+.wrapper_center {
+    position: fixed;
+    z-index: 10076;
+    border-radius: 20rpx;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mask.inner,
+.wrapper_center.inner {
+    animation: opacityInner .3s ease forwards;
+}
+
+.mask.outer,
+.wrapper_center.outer {
+    animation: opacityOuter .3s ease forwards
+}
+
+.wrapper_top {
+    position: fixed;
+    z-index: 10076;
+    border-radius: 0 0 20rpx 20rpx;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.wrapper_bottom {
+    position: fixed;
+    z-index: 10076;
+    border-radius: 20rpx 20rpx 0 0;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+.wrapper_left {
+    position: fixed;
+    z-index: 10076;
+    border-radius: 0 20rpx 20rpx 0;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    height: 100%
+}
+
+.wrapper_right {
+    position: fixed;
+    z-index: 10076;
+    border-radius: 20rpx 0 0 20rpx;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    height: 100%;
+}
+
+.wrapper_top.inner {
+    animation: topInner .3s ease forwards;
+}
+
+.wrapper_top.outer {
+    animation: topOuter .3s ease forwards;
+}
+
+.wrapper_bottom.inner {
+    animation: bottomInner .3s ease forwards;
+}
+
+.wrapper_bottom.outer {
+    animation: bottomOuter .3s ease forwards;
+}
+
+.wrapper_left.inner {
+    animation: leftInner .3s ease forwards;
+}
+
+.wrapper_left.outer {
+    animation: leftOuter .3s ease forwards;
+}
+
+.wrapper_right.inner {
+    animation: rightInner .3s ease forwards;
+}
+
+.wrapper_right.outer {
+    animation: rightOuter .3s ease forwards;
+}
+
+
+.center_body {
+    width: calc(750rpx * 70 / 100);
+    font-size: 28rpx;
+}
+
+.top_body,
+.bottom_body {
+    width: 750rpx
+}
+
+.right_body,
+.left_body {
+    height: 100%;
+}
+
+@keyframes opacityInner {
+    from {
+        opacity: 0;
+        visibility: inherit;
+    }
+
+    to {
+        opacity: 1;
+        visibility: inherit;
+    }
+}
+
+@keyframes opacityOuter {
+    from {
+        opacity: 1;
+        visibility: inherit;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes topInner {
+    from {
+        transform: translate3d(0%, -100%, 0);
+        visibility: hidden;
+    }
+
+    to {
+        transform: translate3d(0%, 0, 0);
+        visibility: inherit;
+    }
+}
+
+@keyframes topOuter {
+    from {
+        transform: translate3d(0%, 0, 0);
+        visibility: inherit;
+    }
+
+    to {
+        transform: translate3d(0%, -100%, 0);
+        visibility: hidden;
+    }
+}
+
+@keyframes bottomInner {
+    from {
+        transform: translate3d(0%, 100%, 0);
+        visibility: hidden;
+    }
+
+    to {
+        transform: translate3d(0%, 0, 0);
+        visibility: inherit;
+    }
+}
+
+@keyframes bottomOuter {
+    from {
+        transform: translate3d(0%, 0, 0);
+        visibility: inherit;
+    }
+
+    to {
+        transform: translate3d(0%, 100%, 0);
+        visibility: hidden;
+    }
+}
+
+@keyframes leftInner {
+    from {
+        transform: translate3d(-100%, 0%, 0);
+        visibility: hidden;
+    }
+
+    to {
+        transform: translate3d(0%, 0, 0);
+        visibility: inherit;
+    }
+}
+
+@keyframes leftOuter {
+    from {
+        transform: translate3d(0%, 0, 0);
+        visibility: inherit;
+    }
+
+    to {
+        transform: translate3d(-100%, 0%, 0);
+        visibility: hidden;
+    }
+}
+
+@keyframes rightInner {
+    from {
+        transform: translate3d(100%, 0%, 0);
+        visibility: hidden;
+    }
+
+    to {
+        transform: translate3d(0%, 0, 0);
+        visibility: inherit;
+    }
+}
+
+@keyframes rightOuter {
+    from {
+        transform: translate3d(0%, 0, 0);
+        visibility: inherit;
+    }
+
+    to {
+        transform: translate3d(100%, 0%, 0);
+        visibility: hidden;
+    }
+}

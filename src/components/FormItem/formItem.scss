@@ -1,0 +1,79 @@
+.form_item {
+    height: 100rpx;
+    position: relative;
+    display: flex;
+    font-size: 26rpx;
+
+    .item_label {
+        width: 172rpx;
+        color: $black;
+        line-height: 100rpx;
+    }
+
+    .input {
+        height: 100rpx;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        color: $black;
+        padding-right: 60rpx;
+
+        .placeholder {
+            color: $b4;
+        }
+
+
+
+    }
+
+    .icon_wrap {
+        position: absolute;
+        height: 100rpx;
+        width: 50rpx;
+        right: 10rpx;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        .arrow_right {
+            transform: rotate(45deg);
+            @include useArrowRight(14rpx, $black_o6);
+
+            &.inner {
+                animation: rotateInner .3s ease forwards;
+            }
+
+            &.outer {
+                animation: rotateOuter .3s ease forwards;
+            }
+        }
+    }
+
+
+
+    &::after {
+        content: '';
+        @include useLine(0, 654rpx, $gray_o2)
+    }
+}
+
+@keyframes rotateInner {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes rotateOuter {
+    0% {
+        transform: rotate(135deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}

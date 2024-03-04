@@ -1,0 +1,196 @@
+.page {
+    min-height: 100vh;
+    background: $bg;
+    padding: 16rpx 24rpx;
+    box-sizing: border-box;
+
+    .header {
+        text-align: center;
+        padding: 40rpx;
+        border-radius: 16rpx;
+        background: $white;
+        font-size: 34rpx;
+        font-weight: bold;
+        color: $black;
+        margin-bottom: 16rpx;
+
+        .status {
+            font-size: 26rpx;
+            font-weight: normal;
+
+            &.red {
+                color: $red;
+            }
+
+            &.green {
+                color: $green;
+            }
+
+            &.orange {
+                color: $orange;
+            }
+        }
+    }
+
+    .card {
+        height: 142rpx;
+        border-radius: 16rpx;
+        background: $white;
+        padding: 0 24rpx;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 16rpx;
+
+        .avatar {
+            width: 60rpx;
+            height: 60rpx;
+            margin-right: 16rpx;
+        }
+
+        .card_info {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            justify-content: center;
+
+            .shop_label {
+                font-size: 24rpx;
+                color: $gray;
+                line-height: 30rpx;
+                margin-bottom: 6rpx;
+            }
+
+            .shop_name {
+                font-weight: bold;
+                color: $black;
+                font-size: 30rpx;
+                line-height: 42rpx;
+            }
+        }
+
+        .register_satus {
+            position: absolute;
+            right: 24rpx;
+            top: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 30rpx;
+            font-weight: bold;
+
+            &.red {
+                color: $red;
+            }
+
+            &.green {
+                color: $green;
+            }
+
+            &.orange {
+                color: $orange;
+            }
+        }
+    }
+
+    .form {
+        padding: 10rpx 24rpx 32rpx;
+        background: $white;
+        border-radius: 16rpx;
+
+        .item {
+            height: 100rpx;
+            position: relative;
+            display: flex;
+            font-size: 26rpx;
+
+            .item_label {
+                width: 172rpx;
+                color: $black;
+                line-height: 100rpx;
+            }
+
+            .input {
+                flex: 1;
+                height: 100%;
+                font-size: 26rpx;
+
+                ::v-deep .uni-input-placeholder {
+                    color: $b4
+                }
+            }
+
+            &::after {
+                content: '';
+                @include useLine(0, 654rpx, $gray_o2)
+            }
+        }
+
+        .form_button {
+            background: $green;
+            color: $white;
+            height: 88rpx;
+            line-height: 88rpx;
+            text-align: center;
+            font-size: 30rpx;
+            border-radius: 100rpx;
+            margin-top: 60rpx;
+
+            &.disabled {
+                opacity: .4;
+            }
+        }
+    }
+}
+
+.picker_body {
+    width: 750rpx;
+    height: 650rpx;
+    box-sizing: border-box;
+    padding: 80rpx 48rpx 0;
+
+    .picker-view {
+        width: 80%;
+        margin: 0 auto;
+        height: 300rpx;
+
+
+        .picker-view-item {
+            line-height: 100rpx;
+            text-align: center;
+            font-size: 26rpx;
+        }
+    }
+
+    .picker_footer {
+        display: flex;
+        justify-content: space-between;
+        height: 88rpx;
+        margin-top: 100rpx;
+
+        .btn {
+            height: 100%;
+            width: 310rpx;
+            border: none;
+            border-radius: 100rpx;
+            font-size: 30rpx;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0
+        }
+
+        .btn.cancel {
+            background: $green_o1;
+            color: $green;
+        }
+
+        .btn.confirm {
+            background: $green;
+            color: $white;
+        }
+    }
+
+
+}
